@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(79, 138, 95, 0.215);
+}
+.container{
+    /* background-color: yellow; */
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 760px; */
+    /* align-self: center; */
+}
+.header{
+flex: 0.1;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+/* background-color: yellow; */
+}
+.header >h1{
+    font-weight: bold;
+    font-size: 35px;
+    animation-name: mylogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.content {
+    animation-name: mylogo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes mylogo {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+
+    30% {
+        opacity: 0.3;
+        color: #1a1a1a    ;
+    }
+
+    60% {
+        opacity: 0.6;
+        color: #1e2a38     ;
+    }
+
+    80% {
+        opacity: 0.8;
+        color: #4e342e    ;
+    }
+
+    100% {
+        opacity: 1;
+        color: #00695c   ;
+    }
+}
+.middle{
+flex: 0.8;
+display: flex;
+/* align-items: center; */
+align-items: center;
+justify-content: center;
+}
+.hello{
+    height:90vh;
+    display: flex;
+    /* justify-content: center; */
+    /* background-color: beige; */
+    width: 90%;
+    max-width: 760px;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    width: 100%;
+    max-width: 760px;
+    align-self: center;
+    height: 300px;
+}
+.content{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.content> strong{
+    font-size: 5vh;
+    align-self: center;
+}
+.content >span{
+    font-size: 4vh;
+}
+.footer{
+flex: 0.1;
+background-color: gainsboro;
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* opacity: 0.2; */
+  }
+  .imgs{
+    opacity: 0.2;
+
+  }
+  
+ .hello .overlay {
+    display: none;
+    position: absolute;
+    bottom: 14vh;
+    left: 0;
+    right: 0;
+    background-color: #008bbad3;
+    overflow: hidden;
+    /* align-self: center; */
+    /* width: 0; */
+    height: 62%;
+    margin-left: 37px;
+    width: 89%;
+    transition: .5s ease;
+  }
+  
+  /* .container:hover .overlay {
+    width: 100%;
+  } */
+  
+  .text {
+    white-space: nowrap; 
+    color: rgb(15, 14, 14);
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
