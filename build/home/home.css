@@ -42,7 +42,7 @@ align-items: center;
     transition: transform 10s ease;
     transition-delay: preserve-3d;
     transform-origin: center;
-    font-size: 2em;
+    font-size: 35px;
 }
 .rotated{
     transform: rotateY(360deg);
@@ -77,14 +77,14 @@ align-items: center;
 
 } 
 .middle{
-flex: 0.8;
+flex: 0.75;
 display: flex;
 /* align-items: center; */
 align-items: center;
 justify-content: center;
+/* background-color: blue; */
 }
 .middle > div{
-    height:90vh;
     display: flex;
     /* justify-content: center; */
     /* background-color: beige; */
@@ -101,7 +101,7 @@ img{
     height: 300px;
 }
 .content{
-    margin-top: 5vh;
+    margin-top: 3vh;
     display: flex;
     flex-direction: column;
 }
@@ -112,8 +112,11 @@ img{
 .content >span{
     font-size: 4vh;
 }
+.content > p{
+    font-size: 4vh;
+}
 .footer{
-flex: 0.1;
+flex: 0.15;
 /* background-color: #51f624; */
 display: flex;
 justify-content: center;
@@ -182,7 +185,7 @@ img {
   .text {
     white-space: nowrap; 
     color: rgb(15, 14, 14);
-    font-size: 20px;
+    /* font-size: 20px; */
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -193,9 +196,14 @@ img {
   a{
     text-decoration: none;
   }
-  a > div{
+  a > button{
     color: white;
     font-size: 50px;
+    background-color: #641b2e5c;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0 10px;
     animation-name: link;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -223,3 +231,49 @@ img {
         color: #171616    ;
     }
 }
+ @media screen and (max-width:500px) {
+
+    .container{
+        display: flex;
+    }
+    .header{
+        flex: 0.15;
+    }
+    .middle{
+        flex: 0.75;
+
+        align-items: end;
+    }
+    .footer{
+
+        flex: 0.15;
+    }
+    .content{
+        margin-top: -10vh;
+    }
+    img{
+        height: 58vh;
+    }
+    a > button{
+    font-size: 35px;
+ }
+ 
+ 
+ .content> strong{
+    font-size: 4vh;
+}
+.content >span{
+    font-size: 3vh;
+}
+.content > p{
+    font-size: 3vh;
+    align-self: center;
+}
+.footer >div{
+    font-size: 15px;
+}
+#header{
+    font-size: 30px;
+}
+
+} 
