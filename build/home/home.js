@@ -1,14 +1,14 @@
 const img = document.getElementById('img'),
-over = document.getElementById('over')
+    over = document.getElementById('over'),
+    header = document.getElementById('header')
+    
 
-function clicsk() {
-    if (over.style.display === "none") {
-        over.style.display ="block";
-        img.classList.add('imgs')     
-    }else{
-        over.style.display ="none"
-        img.classList.remove('imgs')
-    }
-   
+
+function image() {
+    // img.classList.add('imgs')
+    over.style.display = 'block'
+    // img.style.opacity= '0.2'
+    header.innerText= "thanks for clicking"
+    header.classList.toggle('rotated')
+    
 }
-img.addEventListener('click', clicsk)
