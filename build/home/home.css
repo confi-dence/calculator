@@ -266,14 +266,23 @@ img {
     font-size: 3vh;
 }
 .content > p{
-    font-size: 3vh;
+    font-size: 18px;
     align-self: center;
 }
 .footer >div{
-    font-size: 15px;
+    font-size: 3vh;
 }
 #header{
     font-size: 30px;
 }
 
 } 
+@media screen and (max-width: 400px) {
+    img{
+        height: 50vh;
+    }
+    a > button{
+        font-size: 20px;
+     }
+     
+}
