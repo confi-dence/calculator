@@ -4,12 +4,12 @@ const img = document.getElementById('img'),
     
 
 
+    let hasRotated = false
 function image() {
     // img.classList.add('imgs')
     over.style.display = 'block'
     // img.style.opacity= '0.2'
-    header.innerText= "thanks for clicking"
-let hasRotated = false
+    header.innerText= "Thanks for clicking"
 if(!hasRotated){
     header.classList.toggle('rotated')
       hasRotated = true

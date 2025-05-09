@@ -266,7 +266,7 @@ img {
     font-size: 3vh;
 }
 .content > p{
-    font-size: 18px;
+    font-size: 20px;
     align-self: center;
 }
 .footer >div{
@@ -277,12 +277,30 @@ img {
 }
 
 } 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 350px) {
+
     img{
         height: 50vh;
     }
     a > button{
         font-size: 20px;
      }
-     
+     .content > p{
+        font-size: 15px;
+     }
+     .header{
+        margin-bottom: -35vh;
+    }
+
+    .header{
+        flex: 0.15;
+    }
+    .middle{
+        flex: 0.75;
+
+        align-items: end;
+    }
+    .footer > div{
+        font-size: 20px;
+    }     
 }
