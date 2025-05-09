@@ -24,6 +24,8 @@ body {
 .header{
 flex: 0.1;
 display: flex;
+flex-direction: column;
+column-gap: 2vh;
 justify-content: center;
 align-items: center;
 align-items: center;
@@ -231,6 +233,12 @@ img {
         color: #171616    ;
     }
 }
+
+
+.loading{
+    position: a;
+}
+/* for responsiveness */
 @media screen and (max-width: 600px) {
     a > button{
         font-size: 40px;
@@ -253,9 +261,9 @@ img {
 
         flex: 0.15;
     }
-    .content{
-        margin-top: -10vh;
-    }
+    /* .content{
+        margin-top: -5vh;
+    } */
     img{
         height: 58vh;
     }
