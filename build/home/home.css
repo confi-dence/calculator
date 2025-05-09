@@ -231,6 +231,11 @@ img {
         color: #171616    ;
     }
 }
+@media screen and (max-width: 600px) {
+    a > button{
+        font-size: 40px;
+     }
+}
  @media screen and (max-width:500px) {
 
     .container{
@@ -255,7 +260,7 @@ img {
         height: 58vh;
     }
     a > button{
-    font-size: 25px;
+    font-size: 30px;
  }
  
  
