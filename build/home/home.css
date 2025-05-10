@@ -3,13 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     height: 100vh;
     width: 100%;
     /* color: white; */
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(3600deg, #641b2e1b,#8a2d3b23, #be5b5019, #e7f2e41d, rgba(0, 0, 0, 0.311));
+    background: linear-gradient(360deg, #641b2e1b,#8a2d3b23, #be5b5019, #e7f2e41d, rgba(0, 0, 0, 0.311));
 
 }
 .container{
@@ -160,10 +159,6 @@ img {
     }
   .img-animate:hover .overlay {
     height:  100%;
-        margin: auto;
-        /* width: 80%; */
-        /* min-height: 90vh; */
-        /* background: linear-gradient(110deg, #641B2E,#8A2D3B, #BE5B50, #E7f2e4); */
         border-radius: 1vh;
         animation-name: mycontain;
         animation-timing-function: linear;
@@ -198,7 +193,7 @@ img {
   a{
     text-decoration: none;
   }
-  a > button{
+  a >button{
     color: white;
     font-size: 50px;
     background-color: #641b2e5c;

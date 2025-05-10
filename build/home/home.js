@@ -20,7 +20,11 @@ function loading(event){
     removeContent.style.display = 'none'
     event.preventDefault();
     header.innerText = "loading........"
-  header.classList.remove('rotated')
+    if(hasRotated){
+        header.classList.toggle('rotated')
+          hasRotated = true
+    }  
+//   header.classList.remove('rotated')
     setTimeout(()=>{
             window.location.href = link.href
         }, 10000)
