@@ -8,6 +8,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #e7f2e4;
+    font-weight: bold;
+    font-size: 18px;
 }
 .container{
     /* background-color: #8a2d3bcb; */
@@ -32,11 +35,12 @@ justify-content: center;
 align-items: center;
 }
 .modalButton >button{
-    width: 50vh;
-    height: 5vh;
+    width: 46vh;
+    height: 8vh;
     font-size: 20px;
     border: none;
     border-radius: 20px;
+    max-width: 500px;
     background-color: #641b2e5c;
 }
 .footer{
@@ -46,6 +50,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: top;
+color: #403a3a;
 }
 .footer > h3 {
     font-size: 15px;
@@ -54,7 +59,7 @@ h3 >em{
     border-bottom: 1px solid black;
 }
 #modal{
-    background-image: repeating-linear-gradient(45deg, #641b2e1b,#8a2d3b23, #be5b5019 0.7%, #e7f2e41d, rgba(0, 0, 0, 0.311) 10%);
+    background-image: repeating-linear-gradient(45deg, #641b2e1b,#8a2d3b23, #be5b5019 0.7%, #e7f2e41d, #0000004f 10%);
    position: fixed;
    height: 100%;
    width: 100%;
@@ -62,12 +67,19 @@ h3 >em{
    top: 0;
    left: 0;
    overflow: auto;
-   display: none;
+   display: flex;
    justify-content: center;
    align-items: center;
 }
 .modalContent{
-    background-color: red;
+border-radius: 10px;
+    animation-name: clacutor;
+    animation-timing-function: linear;
+    animation-duration: 5s; 
+    animation-delay: 0.5s; 
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
     width: 80%;
     height: 90%;
     margin: 0.7% auto;
@@ -76,40 +88,136 @@ h3 >em{
    max-width: 500px; 
 
 }
-#close{
-    background-color: purple;
+@keyframes clacutor {
+    0%{    background-image: repeating-linear-gradient(45deg, #641b2e4a,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+    20%{    background-image: repeating-linear-gradient(60deg, #641b2e1b,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+    40%{    background-image: repeating-linear-gradient(90deg, #641b2e1b,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+    60%{    background-image: repeating-linear-gradient(180deg, #641b2e1b,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+    80%{    background-image: repeating-linear-gradient(270deg, #641b2e1b,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+    100%{    background-image: repeating-linear-gradient(30deg, #641b2e1b,#8a2d3b48, #be5b5048 0.7%, #e7f2e44e, #00000085 10%);}
+     } 
+.closeModal{
+    /* background-color: purple; */
 flex: 0.1;
+display: flex;
+justify-content: end;
+align-items: center;
+column-gap: 20vh;
+}
+.closeModal > button{
+    font-size: 40px;
+    width: 12%;
+    border: 2px solid #b09d9d;
+    box-shadow: 2px 2px 0 0 #0000004f ;
+border-radius: 10px;
+
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: button;
+        animation-timing-function: linear;
+        animation-duration: 5s; 
+        animation-delay: 0.5s; 
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-direction: alternate-reverse;
 }
 .input{
-background-color: firebrick;
+/* background-color: firebrick; */
 flex: 0.15;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-#number{
-background-color: lawngreen;
+.answer{
+    height: 10vh;
+    border: 1px solid #b09d9d;
+    width: 95%;
+    overflow-x: auto;
+box-shadow: 2px 2px 0 0 #0000004f ;
+border-radius: 10px;
+/* background-color: yellow; */
+display: flex;
+justify-content: center;
+align-items: center;
+animation-name: button;
+animation-timing-function: linear;
+animation-duration: 5s; 
+animation-delay: 0.5s; 
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+animation-direction: alternate-reverse;
+
+}
+.number{
+/* background-color: red; */
 flex: 0.75;
+display: grid;
+grid-template-columns: auto auto auto auto;
+
+padding: 4vh 9vh;
+row-gap: 20px;
+column-gap: 20px;
 
 }
-/* #modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.649);
-    z-index: 1;
-}
-
-.modal-content {
-    background-color: rgb(254, 254, 254);
-    margin: 0.7% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 70%;
-    height: 90%;
-    max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) inset;
+/* .result{
+    grid-column-start: 1;
+grid-column-end: 5;
 } */
+@keyframes button {
+    0%{background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+    20%{background: linear-gradient(120deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+    40%{background: linear-gradient(130deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+    60%{background: linear-gradient(140deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+    90%{background: linear-gradient(150deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+    100%{background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );}
+}
+.number >div {
+    border: 2px solid #b09d9d;
+box-shadow: 2px 2px 0 0 #0000004f ;
+border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: button;
+    animation-timing-function: linear;
+    animation-duration: 5s; 
+    animation-delay: 0.5s; 
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+}
+@media screen and (max-width:475px) {
+    .number{
+/* background-color: yellowgreen; */
+        padding-left: 9vh;
+        
+        }
+        .number > div {
+            width: 8vh;
+        }
+}
+.number{
+    padding-left: 6vh;
+}
+@media screen and (max-width: 375px) {
+    body{
+        font-size: 15px;
+    }
+    .number{
+       align-self: center;
+       padding: 2vh;
+                }
+   .number > div {
+                    width: 7vh;
+   }
+   .modalContent{
+    width: 85%;
+
+}
+/* .closeModal > h3{
+    font-size: 20px;
+} */
+}
