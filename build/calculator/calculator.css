@@ -198,10 +198,15 @@ border-radius: 10px;
         .number > div {
             width: 8vh;
         }
+        /* .number{
+            padding-left: 6vh;
+        } */
+        .modalContent{
+            width: 100%;
+        
+        }
 }
-.number{
-    padding-left: 6vh;
-}
+
 @media screen and (max-width: 375px) {
     body{
         font-size: 15px;
@@ -213,10 +218,7 @@ border-radius: 10px;
    .number > div {
                     width: 7vh;
    }
-   .modalContent{
-    width: 85%;
 
-}
 /* .closeModal > h3{
     font-size: 20px;
 } */

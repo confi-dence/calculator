@@ -26,12 +26,21 @@ function  isoperatoe(char) {
     return['+', '-0', '*' ,'/', '%','**'  ].includes(char)
 }
 function clearNumber() { 
+ 
     score.innerText = '0';
+
 }
 clear.addEventListener('click', clearNumber)
 
 function results() {
+    let results =  Math.sin(number * Math.PI / 180)
+    console.log(results);
+    if (score.innerText.includes('sin')) {
+        score.innerText = results
+        return;
+    }
     try {
+        
         score.innerText = eval(score.innerText)
     } catch (error) {
         if(score.innerText === 'Syntax Error'){
@@ -41,6 +50,4 @@ function results() {
         }
     }
 }
-overResult.addEventListener('click', results)
-
 
