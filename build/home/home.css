@@ -230,9 +230,7 @@ img {
 }
 
 
-.loading{
-    position: a;
-}
+
 /* for responsiveness */
 @media screen and (max-width: 600px) {
     a > button{

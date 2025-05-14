@@ -11,17 +11,17 @@
     <div class="container">
         <div class="calcuator">
             <div id="modal">
-                <div class="modalContent">
+                <div class="modalContent" id="modal-Content">
                     <div  class="closeModal">
                         <h2>Calculator</h2>
                         <button id="close">&times;</button>
                     </div>
                     <div class="input">
-                        <div class="answer">
+                        <div class="answer" id="Answer">
                             <h1 id="score">0</h1>
                         </div>
                     </div>
-                    <div class="number buttonRadius">
+                    <div class="number"  id="Number">
                         
                             <div onclick="showValue('7')">7</div>
                             <div onclick="showValue('8')">8</div>
@@ -49,16 +49,27 @@
                     </div>
                 </div>
             </div>
+            <div class="about" id="aboutCal">
+                <h1>My calculator</h1>
+                <br>
+                <p>this a project i built with html css and javascript</p>
+                <p>to use this calcuator you have to click on <strong>My Calculator</strong> button</p>
+
+                <a href="../home/home.html">
+                    <h3>click to go back</h3>
+                </a>
+            </div>
+
 
         </div>
         <div class="modalButton" >
             <button id="openMoa">
-            button
+            My Calculator
     </button>
 </div>
         <div class="footer">
-            <h3>@2025 Neil ceric C. sapoo</h3>
-           <h3>plato by <em>hfhfhh</em></h3>
+            <h3> your last calculation is <em>0</em></h3>
+           <h3>@2025 <em>confi-dence</em></h3>
         </div>
     </div>
 </body>
