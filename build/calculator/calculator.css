@@ -45,21 +45,26 @@ align-items: center;
     display: flex;
     height: 66vh;
     color: #403a3a;
+    /* max-width: 800px; */
 }
 .about >h1{
     align-self: center;
     margin-bottom: 10px;
+}
+.about > p{
+    padding-left: 5vh;
 }
 a{
     align-self: center;
     margin-top: 5vh;
     background-color: #641b2e5c;
     border-radius: 20px;
-    width: 60%;
+    width: 46vh;
     height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 500px;
 }
 a > h3{
     color: white; 
@@ -225,6 +230,11 @@ background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, 
     animation-fill-mode: forwards;
     animation-direction: alternate-reverse;
 }
+@media screen and (max-width : 500px) {
+    .about > p{
+        padding-left: 1vh;
+    }
+}
 @media screen and (max-width:475px) {
     .number{
 /* background-color: yellowgreen; */
@@ -241,6 +251,7 @@ background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, 
             width: 100%;
         height: 100%;
         }
+        
 }
 
 @media screen and (max-width: 375px) {

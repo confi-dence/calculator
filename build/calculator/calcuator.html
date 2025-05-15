@@ -37,12 +37,12 @@
                             <div onclick="showValue('/')">/</div>
                             
                             <div onclick="showValue('0')">0</div>
-                            <div onclick="showValue('%')">%</div>
+                            <div onclick="showValue('cos')">cos</div>
                             <div onclick="showValue('sin')">sin</div>
                             <div onclick="showValue('*')">&times;</div>
                             <div onclick="showValue('.')">.</div>
-                            <div id="clear">clear</div>
-                            <div >c</div>
+                            <div id="clear">AC</div>
+                            <div id="delectText">DEL</div>
                             
                             
                             <div id="overResult" class="result">=</div>
@@ -54,7 +54,12 @@
                 <br>
                 <p>this a project i built with html css and javascript</p>
                 <p>to use this calcuator you have to click on <strong>My Calculator</strong> button</p>
-
+                <br>
+                 <h1> quick tip</h1>
+                 <p>for the sin e.g (30 sin) not (sin 30)</p>
+                 <p>same with the cos eg (30 cos)</p>
+                 <p>AC (to clear all)</p>
+                 <p>Del(to delect )</p>
                 <a href="../home/home.html">
                     <h3>click to go back</h3>
                 </a>
@@ -62,13 +67,13 @@
 
 
         </div>
-        <div class="modalButton" >
+        <div class="modalButton" id="modal-Button">
             <button id="openMoa">
             My Calculator
     </button>
 </div>
-        <div class="footer">
-            <h3> your last calculation is <em>0</em></h3>
+        <div class="footer" id="footer">
+            <h3>Calculator app build by Confidence</h3>
            <h3>@2025 <em>confi-dence</em></h3>
         </div>
     </div>
