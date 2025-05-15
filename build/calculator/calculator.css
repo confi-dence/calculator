@@ -140,9 +140,9 @@ border-radius: 10px;
     /* background-color: purple; */
 flex: 0.1;
 display: flex;
-justify-content: end;
+justify-content: space-between;
 align-items: center;
-column-gap: 20vh;
+margin-left: 2vh ;
 }
 .closeModal > button{
     font-size: 40px;
@@ -234,6 +234,7 @@ background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, 
     .about > p{
         padding-left: 1vh;
     }
+    
 }
 @media screen and (max-width:475px) {
     .number{
@@ -250,6 +251,9 @@ background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, 
         .modalContent{
             width: 100%;
         height: 100%;
+        }
+        body{
+            font-size: 16px;
         }
         
 }

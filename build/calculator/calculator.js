@@ -67,7 +67,7 @@ function results() {
         if (score.innerText.includes('sin')) {
             let number = parseFloat(score.innerText)
             if (isNaN(number)) {
-                score.innerText = 'Syntax Error'
+                score.innerText = `${number}`
 
             } else {
                 score.innerText = (Math.sin(number * Math.PI / 180)).toFixed(5)
@@ -75,7 +75,7 @@ function results() {
         } else if (score.innerText.includes('cos')) {
             let number = parseFloat(score.innerText)
             if (isNaN(number)) {
-                score.innerText = 'synt'
+                score.innerText = `${number}`
             } else {
                 score.innerText = (Math.cos(number * Math.PI / 180)).toFixed(5)
             }

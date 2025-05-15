@@ -2,7 +2,8 @@ const img = document.getElementById('img'),
     over = document.getElementById('over'),
     header = document.getElementById('header'),
     link = document.getElementById('link'),
-    removeContent = document.getElementById('removeContent')
+    removeContent = document.getElementById('removeContent'),
+    imgAnimate = document.getElementById('imgAnimate')
 
     
 
@@ -17,6 +18,8 @@ function image() {
 }    
 }
 function loading(event){
+    img.classList.add('linkImg')
+    imgAnimate.classList.add('link-animate')
     removeContent.style.display = 'none'
     event.preventDefault();
     header.innerText = "loading........"
