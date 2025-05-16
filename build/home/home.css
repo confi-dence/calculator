@@ -140,7 +140,7 @@ img {
     border-radius: 1vh;
     max-width: 760px;
     align-self: center;
-    height: 300px;
+    height: 100%;
   }
  /* .img-animate:hover img{
     display: none;
