@@ -5,9 +5,6 @@ const img = document.getElementById('img'),
     removeContent = document.getElementById('removeContent'),
     imgAnimate = document.getElementById('imgAnimate')
 
-    
-
-
     let hasRotated = false
 function image() {
     over.style.display = 'block'
@@ -22,10 +19,9 @@ function loading(event){
     imgAnimate.classList.add('link-animate')
     removeContent.style.display = 'none'
     event.preventDefault();
-    header.innerText = "loading........"
     setTimeout(()=>{
                 window.location.href = link.href
-        }, 10000)
+        }, 5000)
 
     header.style.transform = 'none'
         

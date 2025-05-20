@@ -9,10 +9,13 @@ const modal = document.getElementById('modal'),
     aboutCal = document.getElementById('aboutCal'),
     delectText = document.getElementById('delectText'),
     footer = document.getElementById('footer'),
-    modalButton = document.getElementById('modal-Button')
+    modalButton = document.getElementById('modal-Button'), 
+    strong = document.getElementById('strong')
 
-// to close the modal by clicking on button
 
+    
+    strong.innerText = " \" use calculator\""
+    // to close the modal by clicking on button
 closed.addEventListener('click', function () {
     modal.style.display = 'none'
     aboutCal.style.display = 'flex'
@@ -20,7 +23,7 @@ closed.addEventListener('click', function () {
     footer.style.display = 'flex'
 })
 // to open the calcuator
-openMoa.addEventListener('click', function (params) {
+openMoa.addEventListener('click', function ( ) {
     modal.style.display = 'flex'
     aboutCal.style.display = 'none'
     modalButton.style.display = 'none'
@@ -35,8 +38,10 @@ openMoa.addEventListener('click', function (params) {
         })
     }, 5000);
 })
-
 // to show the numbers on my input
+
+
+
 
 function showValue(number) {
     if (score.innerText === '0') {
@@ -63,38 +68,36 @@ clear.addEventListener('click', clearNumber)
 // to bring out the result just by clicking equals to
 function results() {
     try {
-
         if (score.innerText.includes('sin')) {
-            let number = parseFloat(score.innerText)
-            if (isNaN(number)) {
-                score.innerText = `${number}`
-
-            } else {
-                score.innerText = (Math.sin(number * Math.PI / 180)).toFixed(5)
+            let number = parseFloat(score.innerText.replace(/[^0-9.\-]/g, '')); 
+            score.innerText  = Math.sin(number * Math.PI / 180).toFixed(5); 
+        }
+         else if (score.innerText.includes('cos')) {
+            let number = parseFloat(score.innerText.replace(/[^0-9.\-]/g, ''))
+                score.innerText = Math.cos(number * Math.PI / 180).toFixed(5)
+        
+            }  else if (!isFinite(eval(score.innerText))) {
+                score.innerText= 'math Error'
             }
-        } else if (score.innerText.includes('cos')) {
-            let number = parseFloat(score.innerText)
-            if (isNaN(number)) {
-                score.innerText = `${number}`
-            } else {
-                score.innerText = (Math.cos(number * Math.PI / 180)).toFixed(5)
-            }
-        } else {
+            else {
             score.innerText = eval(score.innerText)
         }
     } catch (error) {
+       
         if (score.innerText === 'Syntax Error') {
             score.innerText = '0'
-        } else {
+        }
+        else {
             score.innerText = 'Syntax Error'
         }
-    }
+    } 
 }
 overResult.addEventListener('click', results)
 function delect() {
 
     if (score.innerText.length > 0) {
-        score.innerText = score.innerText.slice(0, -1)
+        score.innerText = score.innerText.slice(0 , -1)
+
     }
     if (score.innerText === '') {
         score.innerText = '0'

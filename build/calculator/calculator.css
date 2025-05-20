@@ -170,12 +170,13 @@ flex: 0.15;
 display: flex;
 justify-content: center;
 align-items: center;
+
 }
 .answer{
     height: 10vh;
     border: 1px solid #b09d9d;
     width: 95%;
-    overflow-x: auto;
+    overflow-y: auto;
 box-shadow: 2px 2px 0 0 #0000004f ;
 border-radius: 10px;
 background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, #000000f4 );
@@ -190,6 +191,13 @@ animation-iteration-count: infinite;
 animation-fill-mode: forwards;
 animation-direction: alternate-reverse;
 
+}
+.answer > h1{
+    width: inherit;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    /* font-size: 16px; */
 }
 .number{
 /* background-color: red; */
@@ -229,6 +237,7 @@ background: linear-gradient(110deg, #641b2eac,#8a2d3ba6, #be5b50a6 , #e7f2e4b0, 
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-direction: alternate-reverse;
+    
 }
 @media screen and (max-width : 500px) {
     .about > p{
