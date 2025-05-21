@@ -55,18 +55,31 @@ function showValue(number) {
         score.innerText += number
     }
 
-    if (length(number)) {
+    if (largerfont(number)) {
+        return;
+    }
+    if (smallerFont(number)) {
         return;
     }
     
     
 }
-function length() {
+function largerfont() {
     if (score.innerText.length > 23) {
         score.style.fontSize = '20px'
     }else if(score.innerText.length > 20){
         score.style.fontSize = '35px'
     }else {
+        score.style.fontSize = '40px'
+    }
+}
+function smallerFont() {
+    if (window.innerWidth > 450) return
+    if (score.innerText.length > 15) {
+        score.style.fontSize = '20px'
+    }else if (score.innerText.length > 8) {
+        score.style.fontSize = '30px'
+    } else{
         score.style.fontSize = '40px'
     }
 }
