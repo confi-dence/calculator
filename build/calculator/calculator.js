@@ -10,10 +10,9 @@ const modal = document.getElementById('modal'),
     delectText = document.getElementById('delectText'),
     footer = document.getElementById('footer'),
     modalButton = document.getElementById('modal-Button'), 
-    strong = document.getElementById('strong')
+    strong = document.getElementById('strong'),
+score = document.getElementById('score')
 
-
-    
     strong.innerText = " \" use calculator\""
     // to close the modal by clicking on button
 closed.addEventListener('click', function () {
@@ -44,14 +43,31 @@ openMoa.addEventListener('click', function ( ) {
 
 
 function showValue(number) {
-    if (score.innerText === '0') {
+    if (score.innerText === '0'  ) {
         if (isoperatoe(number)) {
             return;
-        } else {
+        }else {
             score.innerText = number
         }
-    } else {
+    }else if (score.innerText === 'Syntax Error' || score.innerText === 'NaN') {
+        score.innerText = '0'
+    }else {
         score.innerText += number
+    }
+
+    if (length(number)) {
+        return;
+    }
+    
+    
+}
+function length() {
+    if (score.innerText.length > 23) {
+        score.style.fontSize = '20px'
+    }else if(score.innerText.length > 20){
+        score.style.fontSize = '35px'
+    }else {
+        score.style.fontSize = '40px'
     }
 }
 
@@ -62,8 +78,10 @@ function isoperatoe(char) {
 // to clear number
 function clearNumber() {
     score.innerText = '0';
+    score.style.fontSize = '40px'
 }
 clear.addEventListener('click', clearNumber)
+
 
 // to bring out the result just by clicking equals to
 function results() {
@@ -76,10 +94,9 @@ function results() {
             let number = parseFloat(score.innerText.replace(/[^0-9.\-]/g, ''))
                 score.innerText = Math.cos(number * Math.PI / 180).toFixed(5)
         
-            }  else if (!isFinite(eval(score.innerText))) {
+            }else if (!isFinite(eval(score.innerText))) {
                 score.innerText= 'math Error'
-            }
-            else {
+            }else {
             score.innerText = eval(score.innerText)
         }
     } catch (error) {
@@ -101,6 +118,7 @@ function delect() {
     }
     if (score.innerText === '') {
         score.innerText = '0'
+        score.style.fontSize = '40px'
     }
 }
 delectText.addEventListener('click', delect)
