@@ -96,6 +96,7 @@ color: #403a3a;
 h3 >em{
     border-bottom: 1px solid black;
 }
+
 #modal{
     display: none;
     background-image: repeating-linear-gradient(45deg, #641b2e1b,#8a2d3b23, #be5b5019 0.7%, #e7f2e41d, #0000004f 10%);

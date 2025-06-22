@@ -11,7 +11,9 @@ const modal = document.getElementById('modal'),
     footer = document.getElementById('footer'),
     modalButton = document.getElementById('modal-Button'), 
     strong = document.getElementById('strong'),
-score = document.getElementById('score')
+score = document.getElementById('score'),
+works = document.getElementById('works')
+
 
     strong.innerText = " \" use calculator\""
     // to close the modal by clicking on button
@@ -22,6 +24,7 @@ closed.addEventListener('click', function () {
     footer.style.display = 'flex'
 })
 // to open the calcuator
+
 openMoa.addEventListener('click', function ( ) {
     modal.style.display = 'flex'
     aboutCal.style.display = 'none'
@@ -49,7 +52,7 @@ function showValue(number) {
         }else {
             score.innerText = number
         }
-    }else if (score.innerText === 'Syntax Error' || score.innerText === 'NaN') {
+    }else if (score.innerText === 'Syntax Error' || score.innerText === 'NaN' || score.innerText === 'math Error') {
         score.innerText = '0'
     }else {
         score.innerText += number
@@ -99,14 +102,41 @@ clear.addEventListener('click', clearNumber)
 // to bring out the result just by clicking equals to
 function results() {
     try {
-        if (score.innerText.includes('sin')) {
-            let number = parseFloat(score.innerText.replace(/[^0-9.\-]/g, '')); 
-            score.innerText  = Math.sin(number * Math.PI / 180).toFixed(5); 
-        }
-         else if (score.innerText.includes('cos')) {
-            let number = parseFloat(score.innerText.replace(/[^0-9.\-]/g, ''))
-                score.innerText = Math.cos(number * Math.PI / 180).toFixed(5)
+        const text = score.innerText;
+
+        if (text.includes('sin')) {
+          if (text.startsWith('sin')) {
+            const angle = parseFloat(text.replace(/[^0-9.\-]/g, ''));
+            const result = Math.sin(angle * Math.PI / 180).toFixed(5);
+            score.innerText = result;
         
+          } else {
+            const match = text.match(/^(\d+)(?:\s*)sin(\d+)/);
+            if (match) {
+              const base = parseFloat(match[1]);     // 8
+              const angle = parseFloat(match[2]);    // 30
+              const result = (base * Math.sin(angle * Math.PI / 180)).toFixed(5);
+              score.innerText = result;
+            }else{
+                score.innerText = 'math Error'
+            }
+          }
+        }else if (score.innerText.includes('cos')) {
+        if (score.innerText.startsWith('cos')) {
+            const angle = parseFloat(text.replace(/[^0-9.\-]/g, ''));
+            const result = Math.cos(angle * Math.PI / 180).toFixed(5);
+            score.innerText = result;
+        }else {
+            const match = score.innerText.match(/^(\d+)(?:\s*)cos(\d+)/); 
+            if (match) {
+                const base = parseFloat(match[1]);
+                const angle = parseFloat(match[2]);
+                const result = (base * Math.cos(angle * Math.PI / 180)).toFixed(5);
+                score.innerText = result;
+            }else{
+                score.innerText = 'math Error'
+            }
+        }
             }else if (!isFinite(eval(score.innerText))) {
                 score.innerText= 'math Error'
             }else {
@@ -114,11 +144,8 @@ function results() {
         }
     } catch (error) {
        
-        if (score.innerText === 'Syntax Error') {
+        if ( score.innerText === 'NaN') {
             score.innerText = '0'
-        }
-        else {
-            score.innerText = 'Syntax Error'
         }
     } 
 }
